@@ -1,0 +1,41 @@
+@page "/register"
+<div class="container">
+    <h3>Register</h3>
+    <EditForm Model="myModel" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="mb-3">
+            <label for="Username">Username</label>
+            <input id="Username" class="form-control" @bind="myModel.UserName" />
+        </div>
+
+        <div class="mb-3">
+            <label for="Password">Password</label>
+            <input type="password" id="Password" class="form-control" @bind="myModel.Password" />
+        </div>
+        <div class="mb-3">
+            <label for="Email">Email</label>
+            <input  id="Email" class="form-control" @bind="myModel.Email" />
+        </div>
+        <div class="mb-3">
+            <label for="FullName">FullName</label>
+            <input type="text" id="FullName" class="form-control" @bind="myModel.Email" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </EditForm>
+</div>
+
+
+@code {
+    private UserRegisterVM myModel = new UserRegisterVM();
+
+    private void HandleValidSubmit()
+    {
+        //Gọi api đăng ký 
+        
+
+    }
+
+   
+}   

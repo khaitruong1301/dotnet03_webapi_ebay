@@ -1,0 +1,465 @@
+{
+  "Version": 1,
+  "Hash": "7STBrZpgh06H+YnUKtVlJQkIPX8s0o3aY/eWPwxCysU=",
+  "Source": "EbayProject.Api",
+  "BasePath": "_content/EbayProject.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "EbayProject.Api/wwwroot",
+      "Source": "EbayProject.Api",
+      "ContentRoot": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/wwwroot/",
+      "BasePath": "_content/EbayProject.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/obj/Debug/net9.0/compressed/pr8znc2keo-w4yd6620th.gz",
+      "SourceId": "EbayProject.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/EbayProject.Api",
+      "RelativePath": "data#[.{fingerprint=w4yd6620th}]?.json.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/wwwroot/data.json",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "katb0g0azn",
+      "Integrity": "DCnwJdv1vyYXMg+yNJWyrDZ3nc+Y9Q+v6jFakfcVKBg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/wwwroot/data.json"
+    },
+    {
+      "Identity": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/wwwroot/data.json",
+      "SourceId": "EbayProject.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/wwwroot/",
+      "BasePath": "_content/EbayProject.Api",
+      "RelativePath": "data#[.{fingerprint}]?.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "w4yd6620th",
+      "Integrity": "8FM9XDRM+xrMZAi4On4eLF0LRr/SPcmzNOQr0gxJvZY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/data.json"
+    },
+    {
+      "Identity": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/wwwroot/img/img.jpg",
+      "SourceId": "EbayProject.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/wwwroot/",
+      "BasePath": "_content/EbayProject.Api",
+      "RelativePath": "img/img#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "eoocalwdgr",
+      "Integrity": "7gXAlLAUMLQbYEAt0Tb74pJeEQPIuqvjwN9I0Lpdh6I=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/img.jpg"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "data.json",
+      "AssetFile": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/obj/Debug/net9.0/compressed/pr8znc2keo-w4yd6620th.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.019230769231"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DCnwJdv1vyYXMg+yNJWyrDZ3nc+Y9Q+v6jFakfcVKBg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Jul 2025 13:44:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"8FM9XDRM+xrMZAi4On4eLF0LRr/SPcmzNOQr0gxJvZY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8FM9XDRM+xrMZAi4On4eLF0LRr/SPcmzNOQr0gxJvZY="
+        }
+      ]
+    },
+    {
+      "Route": "data.json",
+      "AssetFile": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/wwwroot/data.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8FM9XDRM+xrMZAi4On4eLF0LRr/SPcmzNOQr0gxJvZY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Jul 2025 13:44:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8FM9XDRM+xrMZAi4On4eLF0LRr/SPcmzNOQr0gxJvZY="
+        }
+      ]
+    },
+    {
+      "Route": "data.json.gz",
+      "AssetFile": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/obj/Debug/net9.0/compressed/pr8znc2keo-w4yd6620th.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DCnwJdv1vyYXMg+yNJWyrDZ3nc+Y9Q+v6jFakfcVKBg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Jul 2025 13:44:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-DCnwJdv1vyYXMg+yNJWyrDZ3nc+Y9Q+v6jFakfcVKBg="
+        }
+      ]
+    },
+    {
+      "Route": "data.w4yd6620th.json",
+      "AssetFile": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/obj/Debug/net9.0/compressed/pr8znc2keo-w4yd6620th.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.019230769231"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DCnwJdv1vyYXMg+yNJWyrDZ3nc+Y9Q+v6jFakfcVKBg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Jul 2025 13:44:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"8FM9XDRM+xrMZAi4On4eLF0LRr/SPcmzNOQr0gxJvZY=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w4yd6620th"
+        },
+        {
+          "Name": "label",
+          "Value": "data.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8FM9XDRM+xrMZAi4On4eLF0LRr/SPcmzNOQr0gxJvZY="
+        }
+      ]
+    },
+    {
+      "Route": "data.w4yd6620th.json",
+      "AssetFile": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/wwwroot/data.json",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "35"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8FM9XDRM+xrMZAi4On4eLF0LRr/SPcmzNOQr0gxJvZY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Jul 2025 13:44:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w4yd6620th"
+        },
+        {
+          "Name": "label",
+          "Value": "data.json"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8FM9XDRM+xrMZAi4On4eLF0LRr/SPcmzNOQr0gxJvZY="
+        }
+      ]
+    },
+    {
+      "Route": "data.w4yd6620th.json.gz",
+      "AssetFile": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/obj/Debug/net9.0/compressed/pr8znc2keo-w4yd6620th.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"DCnwJdv1vyYXMg+yNJWyrDZ3nc+Y9Q+v6jFakfcVKBg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Jul 2025 13:44:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "w4yd6620th"
+        },
+        {
+          "Name": "label",
+          "Value": "data.json.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-DCnwJdv1vyYXMg+yNJWyrDZ3nc+Y9Q+v6jFakfcVKBg="
+        }
+      ]
+    },
+    {
+      "Route": "img/img.eoocalwdgr.jpg",
+      "AssetFile": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/wwwroot/img/img.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2035107"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7gXAlLAUMLQbYEAt0Tb74pJeEQPIuqvjwN9I0Lpdh6I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Jul 2025 13:46:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "eoocalwdgr"
+        },
+        {
+          "Name": "label",
+          "Value": "img/img.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7gXAlLAUMLQbYEAt0Tb74pJeEQPIuqvjwN9I0Lpdh6I="
+        }
+      ]
+    },
+    {
+      "Route": "img/img.jpg",
+      "AssetFile": "/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/wwwroot/img/img.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2035107"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7gXAlLAUMLQbYEAt0Tb74pJeEQPIuqvjwN9I0Lpdh6I=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 11 Jul 2025 13:46:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7gXAlLAUMLQbYEAt0Tb74pJeEQPIuqvjwN9I0Lpdh6I="
+        }
+      ]
+    }
+  ]
+}
