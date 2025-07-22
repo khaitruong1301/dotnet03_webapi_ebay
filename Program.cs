@@ -2,11 +2,12 @@ using System.Net;
 using System.Net.NetworkInformation;
 using System.Security.Claims;
 using System.Text;
-
+using Blazored.LocalStorage;
 using EbayProject.Api.Helpers;
 using EbayProject.Api.Middleware;
 using EbayProject.Api.models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
@@ -119,6 +120,16 @@ builder.Services.AddCors(options =>
 
     });
 });
+
+//Add http client
+builder.Services.AddHttpClient();
+//Add blazor storage
+builder.Services.AddBlazoredLocalStorage();
+
+//Custom phân quyền blazor page
+builder.Services.AddScoped<AuthenticationStateProvider, CustomAuthStateProvider>();
+
+
 var app = builder.Build();
 
 //Cấu hình middleware error 
@@ -141,7 +152,6 @@ app.UseSwaggerUI();
 
 //middleware
 app.UseMiddleware<BlockIpMiddleware>();
-
 app.MapControllers(); // api/ ....
 app.UseHttpsRedirection();
 app.UseAuthentication(); // yêu cầu verify token

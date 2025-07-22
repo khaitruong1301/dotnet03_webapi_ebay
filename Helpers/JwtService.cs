@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using EbayProject.Api.models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
 public class JwtAuthService
@@ -17,7 +18,7 @@ public class JwtAuthService
         _audience = Configuration["jwt:Audience"];
         _context = db;
     }
-    
+
     public string GenerateToken(User userSauKhiVerifyPass)
     {
         // Khóa bí mật để ký token
@@ -32,9 +33,18 @@ public class JwtAuthService
             new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()), // Unique ID của token
             new Claim(JwtRegisteredClaimNames.Iat, DateTime.UtcNow.ToString()) // Thời gian tạo token
         };
+        //Thêm claim role vào token
+        //userSauKhiVerifyPass.Id // 10034
 
-        //Chưa có role 
-        
+        //select * from userole,role where userole.roleid == role.id
+        var lstRole = _context.UserRoles.Include(n=>n.Role).Where(item => item.UserId == userSauKhiVerifyPass.Id);
+        if (lstRole.Count() > 0)
+        {
+            foreach (UserRole item in lstRole)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, item.Role.RoleName.ToString()));
+            }
+        }
 
         // Tạo khóa bí mật để ký token
         var credentials = new SigningCredentials(
@@ -72,7 +82,7 @@ public class JwtAuthService
             var jwtToken = handler.ReadJwtToken(token);
 
             // Lấy username từ claims (thường nằm trong claim "sub" hoặc "name")
-            var usernameClaim = jwtToken.Claims.FirstOrDefault(x =>x.Type == "UserName"); // Common in some identity providers
+            var usernameClaim = jwtToken.Claims.FirstOrDefault(x => x.Type == "UserName"); // Common in some identity providers
 
             if (usernameClaim == null)
             {

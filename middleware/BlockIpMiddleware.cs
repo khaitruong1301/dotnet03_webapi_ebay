@@ -64,9 +64,6 @@ namespace EbayProject.Api.Middleware
             {
                 logCount.ConnectionCount += 1;
             }
-
-
-
             await _contextDB.SaveChangesAsync();
 
             // _logger.LogInformation("Middleware hoàn tất xử lý request.");

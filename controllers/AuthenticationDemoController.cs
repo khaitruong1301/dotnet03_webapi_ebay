@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Json;
 using System.Threading.Tasks;
 using EbayProject.Api.Helpers;
 using EbayProject.Api.models;
@@ -15,10 +16,12 @@ namespace EbayProject.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthenticationDemoController(EbayContext _context,JwtAuthService _jwt) : ControllerBase
+    // [Authorize(Roles = "Admin")]
+
+    public class AuthenticationDemoController(EbayContext _context, JwtAuthService _jwt) : ControllerBase
     {
 
-        [Authorize]
+        [Authorize(Roles = "Admin")] //filter
         [HttpGet("getAllUser")]
         public async Task<ActionResult> getAllUser()
         {
@@ -26,6 +29,7 @@ namespace EbayProject.Api.Controllers
         }
 
         [HttpPost("register")]
+        // []//action filter
         public async Task<ActionResult> Register([FromBody] UserRegisterVM model)
         {
             //Check email và user name có tồn tại hay chưa
@@ -103,10 +107,56 @@ namespace EbayProject.Api.Controllers
             {
                 token = token
             };
-            return Ok(res );
+            //Cấp token qua cookie client 
+            HttpContext.Response.Cookies.Append("token", token, new CookieOptions()
+            {
+                Expires = DateTime.Now.AddDays(7),
+                HttpOnly = true,
+                Secure = true, //chỉ gửi cookie qua https
+                SameSite = SameSiteMode.Strict //Ngăn CSRF
+            });
+
+
+            return Ok(res);
         }
-        
+
+        [HttpGet("GetCookieClient")]
+        public async Task<IActionResult> GetCookieClient()
+        {
+            // string cookie = "";
+            string cookie = "";
+            bool getCookie = HttpContext.Request.Cookies.TryGetValue("token", out cookie);
+
+            return Ok(cookie);
+        }
 
 
+        [HttpPost("DemoFilter")]
+        [DemoFilter(name = "abc")]
+        public IActionResult DemoFilter([FromBody] UserLoginVM model) //model binding
+        {
+            //Action excuting
+
+            //Action handler 
+            Console.WriteLine($@"{JsonSerializer.Serialize(model)}");
+
+            //Action excuted
+            UserLoginVM res = model;
+            return Ok(res);
+        }
+
+        [HttpPost("DemoFilterAsync")]
+        [DemoFilterAsync(name = "abc")]
+        public async Task<IActionResult> DemoFilterAsync([FromBody] UserLoginVM model) //model binding
+        {
+            //Action excuting
+
+            //Action handler 
+            Console.WriteLine($@"{JsonSerializer.Serialize(model)}");
+
+            //Action excuted
+            UserLoginVM res = model;
+            return Ok(res);
+        }
     }
 }

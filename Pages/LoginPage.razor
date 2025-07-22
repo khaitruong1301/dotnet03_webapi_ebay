@@ -1,0 +1,52 @@
+@*Blazor form*@
+@page "/login"
+@inject HttpClient _http
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+<div class="container">
+    <EditForm Model="myModel" OnValidSubmit="HandleValidSubmit">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+        <div class="mb-3">
+            <label for="userNameOrEmail">userNameOrEmail</label>
+            <input id="userNameOrEmail" class="form-control" @bind="myModel.userNameOrEmail" />
+        </div>
+        <div class="mb-3">
+            <label for="password">password</label>
+            <input id="password" type="password" class="form-control" @bind="myModel.password" />
+        </div>
+        @myModel.userNameOrEmail
+        <br />
+        @myModel.password
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </EditForm>
+</div>
+
+@code {
+    private UserLoginVM myModel = new UserLoginVM();
+
+    private async Task HandleValidSubmit()
+    {
+        // Xử lý submit ở đây
+        Console.WriteLine($@"TTDN {JsonSerializer.Serialize(myModel)}");
+        try
+        {
+            //Gọi api lưu vào localstorage
+            //blazor http post
+            var response = await _http.PostAsJsonAsync("http://localhost:5101/api/AuthenticationDemo/login", myModel);
+            response.EnsureSuccessStatusCode();
+            UserLoginResultVM? result = await response.Content.ReadFromJsonAsync<UserLoginResultVM>();
+            Console.WriteLine(@$"{JsonSerializer.Serialize(result)}");
+            //Lưu vào localstorage của browser
+            await localStorage.SetItemAsync<string>("token", result.token);
+
+        }
+        catch (Exception ex)
+        {
+            Console.Error.WriteLine($"POST error: {ex.Message}");
+        }
+
+    }
+
+
+}

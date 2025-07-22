@@ -161,3 +161,5 @@
 /Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/obj/Debug/net9.0/EbayProject.Api.RazorAssemblyInfo.cs
 /Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/bin/Debug/net9.0/BCrypt.Net-Next.dll
 /Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/obj/Debug/net9.0/EbayProject.Api.sourcelink.json
+/Volumes/Cybersoft/dotnet03/EbayProject/EbayProject.Api/bin/Debug/net9.0/Blazored.LocalStorage.dll
